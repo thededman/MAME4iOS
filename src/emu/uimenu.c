@@ -4085,7 +4085,7 @@ static void menu_select_game_custom_render(running_machine *machine, ui_menu *me
         }
 
         tempstr[strlen(tempstr)-1] = '\0';
-        sprintf(&tempbuf[0][0], "%s. Game: %d/%d",tempstr,MIN(myosd_last_game_selected+1,nroms), nroms);
+        sprintf(&tempbuf[0][0], "%s. Game: #%d of %d",tempstr,MIN(myosd_last_game_selected+1,nroms), nroms);
     }
     else
     {
@@ -4093,7 +4093,7 @@ static void menu_select_game_custom_render(running_machine *machine, ui_menu *me
 	#ifdef IOS
 			sprintf(&tempbuf[0][0], "MAME4iOS 64 Bit Game: #%d of %d",MIN(myosd_last_game_selected+1,nroms), nroms);
 	#else
-			sprintf(&tempbuf[0][0], "MAME4droid Game: #%d/%d",MIN(myosd_last_game_selected+1,nroms), nroms);
+			sprintf(&tempbuf[0][0], "MAME4droid Game: #%d of %d",MIN(myosd_last_game_selected+1,nroms), nroms);
 	#endif
     }
     
